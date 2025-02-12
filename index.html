@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Name Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="./Styles/wickedcss.min.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="icon" href="./images/technology.png" type="image of gears">
+</head>
+
+<body>
+    <div class="titleContainer flex flex-wrap">
+        <div class="titleBox fadeIn">
+            <h1 class=" titleText text-center">Random Name Generator</h1>
+        </div>
+    </div>
+
+    <br>
+    <!-- <br> -->
+
+    <section class="addNameSection flex justify-center">
+        <div class="addNameContainer flex justify-evenly">
+            <div class="AddNameBox ">
+                <div><input id="userName" class="nameInput" type="text" placeholder="Enter Name"></div>
+                <div class="nameBtn flex justify-center"><button id="addBtn" class="addNameBtn">Add Name</button></div>
+            </div>
+            <div class="generatebox">
+                <div id="nameGenerator" class="nameSpace text-center">--</div>
+                <button id="generateBtn" class="generateButton">Random Name</button>
+            </div>
+            <div class="randomBox">
+                <span class="slidebarText text-sm font-medium text-white dark:text-white">Group size</span>
+                <input id="disabled-range" min="2" max="10" type="range" value="2"
+                    class="w-300px h-2 bg-gray-200 rounded-lg  cursor-pointer dark:bg-white">
+                <span id="sliderValue" class="ml-2 text-white"></span>
+                <div class="random flex justify-center">
+                    <button id="RandomBtn" class="addRandomBtn">Get Random Groups</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="nameSection">
+        <div class="nameBox">
+            <h2 class="namesText text-center text-white">Names:</h2>
+            <div>
+                <ul class="nameList">
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="groupSection flex justify-center">
+        <div class="groupBox">
+        <h1 class="groupText text-center">Groups:</h1>
+        <div><button id="closeGroupBtn" class="closeBtn">Close</button></div>
+        <div id="groupResults" class="resultsList"></div>
+        </div>
+    </section>
+
+
+
+
+    <script type="module" src="./Scripts/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+</body>
+
+</html>
